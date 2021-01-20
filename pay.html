@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css"> 
+    <link rel="stylesheet" href="css/media.css">   
+</head>
+<body>
+    <header class="nav_top">
+    <div class="wrapper wrapper_header">
+        <div class="burger">
+            <img src="img/burger.png" alt="Burger" onclick="myFunction()" class="dropbtn" id="hidden__burger">
+            <img src="img/burgermobile.png" alt="Burger" onclick="myFunction()" class="dropbtn" id="open">
+            <nav  id="myDropdown" class="dropdown-content">
+                <ul>
+                    <a href="#">О проекте</a>
+                    <a href="#">Наша методика</a>
+                    <a href="#">Ваш путь</a>
+                    <a href="#">Послания</a>
+                    <a href="#">Медитация</a>
+                    <a href="#">Контакты</a>
+                </ul>
+            </nav>
+        </div>
+        <div class="wrapper_header_button">
+            <a class="button_enter">Вход</a>
+            <a class="button_reg">Регистрация</a>
+        </div>
+        <div class="header__enter">
+            <a href="registration.html">
+                <img src="img/circle.png" class="picture">
+            </a>
+        </div>
+    </div>
+</header>
+<main>
+    <section class="registration">
+        <div class="registration__wrapper">
+            <div class="registration__page-pay">
+                <img src="img/pay.png">
+            </div>
+            <form class="registration__form-pay" action="#">
+                <div class="form__pay">
+                <p>Форма оплаты</p>
+                <div class="block__form">  
+                    <input type="text" placeholder="Номер карты" name="femaly" required class="femaly">
+                </div>
+                <div class="block__form block">  
+                    <input type="text" placeholder="XX/XX" name="xx/xx" required class="sex">
+                    <input type="text" placeholder="Koд" name="code" required class="code">
+                </div>
+                <div class="block__form">  
+                    <input type="text" placeholder="Фамилия Имя" name="number" required class="number">
+                </div>
+                <button class="registration__button">Оплатить</button>
+            </div>
+            </form>
+        </div>
+    </section>
+            <div class="footer__border"></div>
+</main>
+    <script src="https://snipp.ru/cdn/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://snipp.ru/cdn/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	<script src="https://snipp.ru/cdn/jQuery-Timepicker-Addon/dist/jquery-ui-timepicker-addon.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script>
+		//burger-menu
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+        // Закройте выпадающее меню, если пользователь щелкает за его пределами
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+		
+	</script>
+</body>
+</html>
+
